@@ -151,7 +151,7 @@ namespace meautosd
                 if (process.Length != 0)
                 {
                     status = 1;
-                    lbStatus.Text = "Waiting for finishing the render lsit.";
+                    lbStatus.Text = "Waiting for finishing the render list.";
                     lbStatus.ForeColor = Color.Cyan;
                     pbStatus.Image = Properties.Resources.status_ready;
                 }
@@ -275,11 +275,11 @@ namespace meautosd
 
         public void shutDown()
         {
-            Process.Start("shutdown", "/s /t " + Settings.Default.delayTime * 60);
+            Process.Start("shutdown", "/f /s /t " + Settings.Default.delayTime * 60);
             btCancelTask.Enabled = true;
             enabled_btCancelTask = true;
             timer1.Start();
-            taskType = "Der PC wird heruntergefahren in: ";
+            taskType = "DYour PC will shutdown in: ";
             finished = true;
             time = Settings.Default.delayTime * 60;
 
