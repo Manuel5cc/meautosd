@@ -77,7 +77,7 @@ namespace meautosd
             }  
             catch(Exception exception)
             {
-                MessageBox.Show("A problem occured while checking for updates.\n\nIf your PC is in offline mode, pelase go online to check for updates.\n\nHere you can see the cause of the error: \n" + exception, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("A problem occured while checking for updates.\n\nIf your PC is in offline mode, please go online to check for updates.\n\nHere you can see the cause of the error: \n" + exception, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             testForCSCore();
@@ -279,7 +279,7 @@ namespace meautosd
             btCancelTask.Enabled = true;
             enabled_btCancelTask = true;
             timer1.Start();
-            taskType = "DYour PC will shutdown in: ";
+            taskType = "Your PC will shutdown in: ";
             finished = true;
             time = Settings.Default.delayTime * 60;
 
